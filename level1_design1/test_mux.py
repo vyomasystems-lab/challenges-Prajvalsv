@@ -53,11 +53,10 @@ async def test1_mux(dut):
    
    """Test for mux2_mytest"""
 
-      # input driving 
-    dut.inp12.value = 1;
-    dut.inp13.value = 2;
-    dut.inp11.value = 3;
-  
+    # input driving 
+    dut.inp12.value = 1
+    dut.inp13.value = 2
+    dut.inp11.value = 3
     dut.sel.value = 13
     
     await Timer(2, units='ns')
