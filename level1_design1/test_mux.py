@@ -56,7 +56,7 @@ async def test_mine_mux(dut):
     dut.inp13.value = 2
     dut.inp11.value = 3
 
-    for i in range(5)
+    for i in range(5):
      dut.sel.value = 13
     
      await Timer(2, units='ns')
