@@ -49,7 +49,8 @@ async def test_mux(dut):
 
 
 @cocotb.test()
-async def test1_mux(dut):
+
+ async def test1_mux(dut):
    
    """Test for mux2_mytest"""
 
