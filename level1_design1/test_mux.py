@@ -46,3 +46,20 @@ async def test_mux(dut):
         
     assert dut.out.value == 2, "Randomised test failed with: {} = {}".format(dut.sel.value, dut.out.value)
 
+
+
+@cocotb.test()
+async def test1_mux(dut):
+   
+   """Test for mux2_mytest"""
+
+ # input driving
+    dut.inp12.value = 1;
+    dut.inp13.value = 2;
+    dut.inp11.value = 3;
+  
+    dut.sel.value = 13
+    
+    await Timer(2, units='ns')
+        
+    assert dut.out.value == 2, "Randomised test failed with: {} = {}".format(dut.sel.value, dut.out.value)
