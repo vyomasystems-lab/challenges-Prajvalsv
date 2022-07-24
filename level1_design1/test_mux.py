@@ -49,12 +49,11 @@ async def test_mux(dut):
 
 
 @cocotb.test()
-
- async def test1_mux(dut):
+async def test1_mux(dut):
    
    """Test for mux2_mytest"""
 
-    # input driving 
+     # input driving 
     dut.inp12.value = 1
     dut.inp13.value = 2
     dut.inp11.value = 3
