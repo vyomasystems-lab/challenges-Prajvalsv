@@ -41,5 +41,6 @@ async def test_mux(dut):
     dut.inp30.value = 2;
     for i in range(4):
       dut.sel.value = random.randint(0, 31)
-        assert dut.out.value == 2, f"Randomised test failed with: {} = {}".format(dut.sel.value, dut.out.value)
+        
+    assert dut.out.value == 2, f"Randomised test failed with: {} = {}".format(dut.sel.value, dut.out.value)
 
