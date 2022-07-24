@@ -9,6 +9,25 @@ The values are assigned to the sel port and checked with design output by using 
 ![image](https://user-images.githubusercontent.com/109435612/180640018-9fdface2-e562-40ed-a13e-2a9e93b97f5d.png)
 
 BUG IDENTIFIED BY TESTING IN TOOL
+
 ![image](https://user-images.githubusercontent.com/109435612/180640065-ca3e54d0-f503-458d-b77b-230e6d70dc3b.png)
- Test failed when select port line value is 13 or 01101 bcoz in design two different output are assigned to same select line as shown
+
+Test failed when select port line value is 13 or 01101 bcoz in design two different output are assigned to same select line as shown
+
+DESIGN BUG
+ 
  ![image](https://user-images.githubusercontent.com/109435612/180640105-1008c3b3-99d3-4f19-9a43-bfd041f9e31c.png)
+ 
+ DESIGN FIX
+ 
+ design is fixed by changing the sel line values
+ 
+ ![image](https://user-images.githubusercontent.com/109435612/180640303-10e5f292-b5cd-4da1-ad9b-d22cbf7c1eba.png)
+
+DESIGN TEST AFTER EDITING DESIGN WITH CORRECT SELECT VALUES
+
+![image](https://user-images.githubusercontent.com/109435612/180640352-088e4a18-2956-4e33-9242-43d6abef6d31.png)
+
+The given design bug is identified
+
+ 
