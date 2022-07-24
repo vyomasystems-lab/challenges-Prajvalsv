@@ -39,7 +39,7 @@ async def test_mux(dut):
     dut.inp28.value = 2;
     dut.inp29.value = 2;
     dut.inp30.value = 2;
-    for i in range(4):
+    for i in range(35):
       dut.sel.value = random.randint(0, 31)
     
     await Timer(2, units='ns')
