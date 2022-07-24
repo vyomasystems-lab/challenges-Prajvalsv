@@ -50,14 +50,12 @@ async def test_mux(dut):
 
 @cocotb.test()
 async def test_mine_mux(dut):
-   
    """Test for mux2_mytest"""
-
-  
-      dut.inp12.value = 1
-      dut.inp13.value = 2
-      dut.inp11.value = 3
-      dut.sel.value = 13
+     # input driving
+    dut.inp12.value = 1
+    dut.inp13.value = 2
+    dut.inp11.value = 3
+    dut.sel.value = 13
     
     await Timer(2, units='ns')
         
