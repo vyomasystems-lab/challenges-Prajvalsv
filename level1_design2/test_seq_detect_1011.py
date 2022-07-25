@@ -29,6 +29,6 @@ async def test_seq_bug1(dut):
         dut.inp_bit.value = random.randint(0,1)
         await FallingEdge(dut.clk)
 
-        assert dut.seq_seen.value == 1, "Randomised test failed with: {}  = {}".format(dut.inp_bit.value, dut.seq_seen.value)
+        assert dut.seq_seen.value == 0, "Randomised test failed with: {}  = {}".format(dut.inp_bit.value, dut.seq_seen.value)
 
 
