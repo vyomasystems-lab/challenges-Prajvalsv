@@ -25,7 +25,7 @@ async def test_seq_bug1(dut):
 
       # input driving
      
-     for i in range(30):
+     for i in range(100):
         dut.inp_bit.value = random.randint(0,1)
         await FallingEdge(dut.clk)
 
