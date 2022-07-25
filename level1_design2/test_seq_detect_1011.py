@@ -25,14 +25,8 @@ async def test_seq_bug1(dut):
 
       # input driving
      
-     dut.inp_bit.value=0
-     dut.inp_bit.value=1
-     dut.inp_bit.value=0
-     dut.inp_bit.value=1
-     dut.inp_bit.value=1
-       
-    
-   
-     assert dut.seq_seen.value == 1, "Randomised test failed with: {}  = {}".format(dut.inp_bit.value, dut.seq_seen.value)
+     for i in range(10):
+        dut.sel.value = random,randint(0,1)
+        assert dut.seq_seen.value == 1, "Randomised test failed with: {}  = {}".format(dut.inp_bit.value, dut.seq_seen.value)
 
 
