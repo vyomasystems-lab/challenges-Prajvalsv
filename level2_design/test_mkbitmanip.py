@@ -34,7 +34,7 @@ def run_test(dut):
 
     ######### CTB : Modify the test to expose the bug #############
     # input transaction
-    for i in range(20):
+    for i in range(1):
      mav_putvalue_src1 = 0x1043AB56
      mav_putvalue_src2 = 0x1234ADC7
      mav_putvalue_src3 = 0x9654ADCF
