@@ -18,24 +18,40 @@ BUG IDENTIFIED BY TESTING IN TOOL
 Test failed here because it is not designed properly to detcect SEQUENCE 1011
 
 DESIGN BUGs
+
 1
+
 ![image](https://user-images.githubusercontent.com/109435612/180757327-9549ad0f-9365-40f8-ba95-f65a704480b0.png)
+
 2
+
 ![image](https://user-images.githubusercontent.com/109435612/180757511-b137d282-b283-4143-be60-2853983c3306.png)
+
 3
+
 ![image](https://user-images.githubusercontent.com/109435612/180757690-b9bc1444-44c3-4d15-ad80-b1830acacde5.png)
+
+
 
 DESIGN BUGS FIXED AND REPLACED WITH APPROPRIATE CODES AND ASSIGNMENTS
 
 1
+
 ![image](https://user-images.githubusercontent.com/109435612/180758119-157872f8-89d1-4362-bfcf-e5f8c18d152b.png)
+
 2
+
 ![image](https://user-images.githubusercontent.com/109435612/180758159-25244c3f-3788-4e33-a5d3-995086db1c2d.png)
+
 3
+
 ![image](https://user-images.githubusercontent.com/109435612/180758209-caefdbde-13e9-4463-a87a-b71645da379e.png)
+
  default statement is added to obtain good coverage
  
+ 
  DESIGN TEST AFTER EDITING DESIGN WITH CORRECT SELECT VALUES
+ 
  
  ![image](https://user-images.githubusercontent.com/109435612/180758423-472fd4e2-69e2-499f-b2e1-8cf4b7a94eac.png)
 
