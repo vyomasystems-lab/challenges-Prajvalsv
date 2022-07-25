@@ -35,10 +35,10 @@ def run_test(dut):
     ######### CTB : Modify the test to expose the bug #############
     # input transaction
     for i in range(1):
-     mav_putvalue_src1 = 0x1043AB56
-     mav_putvalue_src2 = 0x1234ADC7
-     mav_putvalue_src3 = 0x9654ADCF
-     mav_putvalue_instr = 0x0
+     mav_putvalue_src1 = 0x0043AB56
+     mav_putvalue_src2 = 0x0034ADC7
+     mav_putvalue_src3 = 0x0004ADCF
+     mav_putvalue_instr = 0x00004514
 
      # expected output from the model
      expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
