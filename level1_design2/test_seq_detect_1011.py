@@ -24,8 +24,7 @@ async def test_seq_bug1(dut):
      await FallingEdge(dut.clk)
 
       # input driving
-     dut.reset.value=1
-     dut.reset.value=0
+     
      dut.inp_bit.value=0
      dut.inp_bit.value=1
      dut.inp_bit.value=0
