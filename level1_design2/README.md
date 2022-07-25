@@ -54,5 +54,7 @@ DESIGN BUGS FIXED AND REPLACED WITH APPROPRIATE CODES AND ASSIGNMENTS
  
  
  ![image](https://user-images.githubusercontent.com/109435612/180758423-472fd4e2-69e2-499f-b2e1-8cf4b7a94eac.png)
+ 
+ The given design bug is identified
 
 
