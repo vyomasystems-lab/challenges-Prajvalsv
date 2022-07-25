@@ -38,7 +38,7 @@ def run_test(dut):
      mav_putvalue_src1 = 0x1043AB56
      mav_putvalue_src2 = 0x1234ADC7
      mav_putvalue_src3 = 0x9654ADCF
-     mav_putvalue_instr = random.randint(0x0,0x00001234)
+     mav_putvalue_instr = random.randint(0,1
 
      # expected output from the model
      expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
