@@ -1,6 +1,6 @@
 
 // Verilog module for Sequence detection: 1001 without overlap
-module seq_detect_1001(seq_seen, inp_bit, reset, clk);
+module seq_1001_detect(seq_seen, inp_bit, reset, clk);
 
   output seq_seen;
   input inp_bit;
