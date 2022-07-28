@@ -4,7 +4,7 @@ TOPLEVEL_LANG ?= verilog
 
 PWD=$(shell pwd)
 
-VERILOG_SOURCES = $(PWD)/               # provide your design path
+VERILOG_SOURCES = $(PWD)/seq_1001_detect.v        # provide your design path
 
 TOPLEVEL :=  seq_1001_detect       # design file
 MODULE   :=   test_seq_detect_1001  # test file
