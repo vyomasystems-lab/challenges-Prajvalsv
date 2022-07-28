@@ -1,64 +1,77 @@
-module moore1001(
-	input clk, rst, I,
-	output reg [1:0] ps, ns,
-	output reg Y);
-	// States
-	parameter [1:0] S0 = 2'b00,
-					S1 = 2'b01,
-					S2 = 2'b10,
-					S3 = 2'b11;
-            // Present state block
-	always @(posedge clk, posedge rst)
-	begin
-		if(rst)
-          ps <= S0;
-		else
-			ps <= ns;
-	end
-	// Next state block
-	always @(posedge clk , I, ps)
-	begin
-		case(ps)
-			S0: begin
-					if(I)
-						ns <= S1;
-					else
-						ns <= S0;
-				end
-			S1: begin
-					if(I)
-						ns <= S1;
-					else
-						ns <= S2;
-				end
-			S2: begin
-					if(I)
-						ns <= S3;
-					else
-						ns <= S0;
-				end
-			S3: begin
-					if(I)
-						ns <= S1;
-					else
-						ns <= S0;
-                                                           end
-			default: ns <= S0;
-		endcase
-	end
-	
 
+// Verilog module for Sequence detection: 1001 without overlap
+module seq_detect_1001(seq_seen, inp_bit, reset, clk);
 
+  output seq_seen;
+  input inp_bit;
+  input reset;
+  input clk;
 
-// Output block
-	always @(posedge clk, ps)
-	begin
-		case(ps)
-			S0: Y <= 0;
-			S1: Y <= 0;
-			S2: Y <= 0;
-			S3: Y <= 1;
-			default: Y <= 0;
-		endcase
-	end
+  parameter IDLE = 0,
+            SEQ_1 = 1, 
+            SEQ_10 = 2,
+            SEQ_100 = 3,
+            SEQ_1001 = 4;
+
+  reg [2:0] current_state, next_state;
+
+  // if the current state of the FSM has the sequence 1001, then the output is
+  // high
+  assign seq_seen = current_state == SEQ_1001 ? 1 : 0;
+
+  // state transition
+  always @(posedge clk)
+  begin
+    if(reset)
+    begin
+      current_state <= IDLE;
+    end
+    else
+    begin
+      current_state <= next_state;
+    end
+  end
+
+  // state transition based on the input and current state
+  always @(inp_bit or current_state)
+  begin
+    case(current_state)
+      IDLE:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1;
+        else
+          next_state = IDLE;
+      end
+      SEQ_1:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1;
+        else
+          next_state = SEQ_10;
+      end
+      SEQ_10:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1;
+        else
+          next_state = SEQ100;
+      end
+      SEQ_101:
+      begin
+        if(inp_bit == 1)
+          next_state = SEQ_1001;
+        else
+          next_state = IDLE;
+      end
+      SEQ_1011:
+      begin
+       if(inp_bit == 1)
+          next_state = SEQ_1;
+        else
+          next_state = IDLE;
+       end
+      default : next_state = IDLE;
+    endcase
+  end
 endmodule
