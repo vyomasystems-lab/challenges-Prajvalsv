@@ -55,7 +55,7 @@ module seq_1001_detect(seq_seen, inp_bit, reset, clk);
         if(inp_bit == 1)
           next_state = SEQ_1;
         else
-          next_state = SEQ100;
+          next_state = SEQ_100;
       end
       SEQ_100:
       begin
