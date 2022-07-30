@@ -12,7 +12,7 @@ The values are assigned to the sel port and checked with design output by using 
 
 GIVEN INPUT TO CHECK DESIGN INITIALLY
 
-![image](https://user-images.githubusercontent.com/109435612/180860124-d94458c9-5e4e-44f7-91fe-21fab092a079.png)
+![image](https://user-images.githubusercontent.com/109435612/181937548-a83d3f3e-6417-4a24-a88f-e82d29479c16.png)
 
 
 BUG IDENTIFIED BY TESTING IN TOOL
