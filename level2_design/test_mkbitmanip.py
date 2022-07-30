@@ -41,7 +41,7 @@ def run_test(dut):
      mav_putvalue_instr = 0x00004514
 
      # expected output from the model
-     expected_mav_putvalue = bitmanip(mav_putvalue_instr, mav_putvalue_src1, mav_putvalue_src2, mav_putvalue_src3)
+     expected_mav_putvalue in range (0x00000000,0xFFFFFFFF)
 
      # driving the input transaction
      dut.mav_putvalue_src1.value = mav_putvalue_src1
