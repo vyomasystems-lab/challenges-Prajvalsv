@@ -42,7 +42,7 @@ def run_test(dut):
 
      # expected output from the model
      expected_mav_putvalue =0x00000000;
-         for j in range (1000000):
+      for j in range (1000000):
          expected_mav_putvalue =expected_mav_putvalue + 0x00000001
                                
 
