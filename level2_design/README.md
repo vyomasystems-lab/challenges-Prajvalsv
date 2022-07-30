@@ -23,3 +23,7 @@ BUG IDENTIFIED BY TESTING IN TOOL
 Test failed when instructor port  mav_putvalue_instr = 0x208756ac as shown in above figure
 the design is showing that expected output is zero that need to rectified
 
+Test Passed
+
+![image](https://user-images.githubusercontent.com/109435612/181938288-ea4f0d23-b3e9-4c86-b48d-e559b0976d46.png)
+
