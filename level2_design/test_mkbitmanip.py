@@ -34,14 +34,13 @@ def run_test(dut):
 
     ######### CTB : Modify the test to expose the bug #############
     # input transaction
-    for i in range(1):
      mav_putvalue_src1 = 0x00000001
      mav_putvalue_src2 = 0x00000001
      mav_putvalue_src3 = 0x00000001
      mav_putvalue_instr = 0x00004514
 
      # expected output from the model
-     expected_mav_putvalue =0x00000000;
+     expected_mav_putvalue =0x00000000
         for j in range (1000000):
          expected_mav_putvalue =expected_mav_putvalue + 0x00000001
                                
